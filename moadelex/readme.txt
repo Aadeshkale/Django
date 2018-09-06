@@ -10,3 +10,9 @@ DATABASES = {
         'PASSWORD': 'dx619',
     }
 }
+
+
+2.check database connection
+
+from django.db import connection
+c=connection.cursor()
