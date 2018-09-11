@@ -10,7 +10,7 @@ class Student(models.Model):
         return self.name
 
 class Course(models.Model):
-    student=models.OneToOneField(Student,on_delete=models.DO_NOTHING)   # mapping one to one relationship with mode
+    cid=models.OneToOneField(Student,on_delete=models.CASCADE,null=True)   # mapping one to one relationship with mode
     cname=models.CharField(max_length=20)
     cfee=models.IntegerField()
     def __str__(self):
