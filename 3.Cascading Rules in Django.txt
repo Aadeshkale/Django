@@ -1,0 +1,54 @@
+Cascading Rules: (as same in sql databases)
+
+1.CASCADE:-
+
+In this rule if we delete parent record then the associative child record also deleted in tabel reletionships,
+
+note:- In Django This is Default rule for any tabel reletionship
+
+example,
+
+class Depart(models.Model):
+    ed=models.OneToOneField(Emp,on_delete=models.CASCADE,null=True)
+    dname=models.CharField(max_length=10)
+    def __str__(self):
+      return self.dname
+
+2.SET_NULL:-
+
+In this rule if we delete parent record then the associative child record is set to null automatically in tabel reletionships
+
+example,
+
+class Depart(models.Model):
+    ed=models.OneToOneField(Emp,on_delete=models.SET_NULL,null=True)
+    dname=models.CharField(max_length=10)
+    def __str__(self):
+      return self.dname
+
+3.SET(value):-
+
+In this rule if we delete parent record then the associative child record is set to a specified value automatically in tabel reletionships
+
+example,
+
+class Depart(models.Model):
+    ed=models.OneToOneField(Emp,on_delete=models.SET(10),null=True)
+    dname=models.CharField(max_length=10)
+    def __str__(self):
+      return self.dname
+
+
+4.DO_NOTHING:-
+
+In this rule if we delete parent record then it well throw integrity error to prevent parent tabel record in tabel reletionships.
+
+
+example,
+
+class Depart(models.Model):
+    ed=models.OneToOneField(Emp,on_delete=models.DO_NOTHING,null=True)
+    dname=models.CharField(max_length=10)
+    def __str__(self):
+      return self.dname
+
