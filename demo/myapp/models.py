@@ -10,7 +10,7 @@ class Emp(models.Model):
     def __str__(self):
         return self.name
 class Depart(models.Model):
-    ed=models.OneToOneField(Emp,on_delete=models.CASCADE)
+    ed=models.OneToOneField(Emp,on_delete=models.SET_NULL,null=True)
     dname=models.CharField(max_length=10)
     def __str__(self):
       return self.dname
