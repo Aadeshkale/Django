@@ -11,6 +11,6 @@ class Student(models.Model):
         return self.name
     
 class Course(models.Model):
-    student=models.OneToOneField(Student,on_delete=models.SET_NULL,null=True)
+    student=models.OneToOneField(Student,on_delete=models.CASCADE,null=True)
     cname=models.CharField(max_length=20)
     cfee=models.IntegerField()
