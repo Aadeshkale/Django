@@ -7,7 +7,7 @@ class AdminStudent(admin.ModelAdmin):
    list_display=['name','age','loc'] 
 
 class AdminCourse(admin.ModelAdmin):
-    list_display=['cname','cfee']
+    list_display=['cname','cfee',]
 
 # Register your models here.
 
