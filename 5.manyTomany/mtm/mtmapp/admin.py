@@ -8,9 +8,9 @@ class AdminStudent(admin.ModelAdmin):
 
 class AdminCourse(admin.ModelAdmin):
     list_display=['cname','cfee']
-    
+
 # Register your models here.
 
-admin.site.register(Student)
-admin.site.register(Course)
+admin.site.register(Student,AdminStudent)
+admin.site.register(Course,AdminCourse)
 
