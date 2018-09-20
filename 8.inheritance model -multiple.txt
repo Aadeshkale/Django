@@ -1,0 +1,10 @@
+In multiple model inheritance the problem is rased due to common id fields 
+
+
+solve this problem by modifing Default id field
+
+example,
+
+eid=models.AutoField(primary_key=True)
+
+cid=models.AutoField(primary_key=True)  
