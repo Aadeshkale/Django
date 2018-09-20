@@ -12,6 +12,6 @@ class AdminEmployee(admin.ModelAdmin):
     
 # Register your models here.
 
-admin.site.register(Student,AdminStudent)
-admin.site.register(Coustmer,AdminCourse)
-admin.site.register(Employee,AdminEmployee)
+admin.site.register(Student)
+admin.site.register(Coustmer)
+admin.site.register(Employee)
