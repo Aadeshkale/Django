@@ -11,3 +11,6 @@ class Emp(models.Model):
     def __str__(self):
         return self.name
     
+class Dept(models.Model):
+    emp=models.OneToOneField(Emp,on_delete=models.CASCADE)
+    dname=models.CharField(max_length=20)
