@@ -7,6 +7,7 @@ class Emp(models.Model):
     name=models.CharField(max_length=20)
     loc=models.CharField(max_length=20)
     sal=models.IntegerField()
+    obj=models.Manager()
     def __str__(self):
         return self.name
     
