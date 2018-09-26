@@ -6,4 +6,4 @@ class AdminEmp(admin.ModelAdmin):
     list_display=['id','name','loc','sal']
 
 # Register your models here.
-admin.site.register(Emp)    
+admin.site.register(Emp,AdminEmp)    

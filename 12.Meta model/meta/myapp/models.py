@@ -8,4 +8,7 @@ class Emp(models.Model):
     sal=models.IntegerField()
     def __str__(self):
         return self.name 
-       
+    class Meta:
+        db_table='Employee'         # change database name   
+        ordering=['name']           # ording in asseending order on name coloumn for reverse use ['-name']
+        
