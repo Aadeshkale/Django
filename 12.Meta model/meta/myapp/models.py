@@ -11,4 +11,4 @@ class Emp(models.Model):
     class Meta:
         db_table='Employee'         # change database name   
         ordering=['name']           # ording in asseending order on name coloumn for reverse use ['-name']
-        
+        unquie_together=['name','pune']
