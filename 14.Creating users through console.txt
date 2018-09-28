@@ -1,0 +1,44 @@
+Adding users to admin site from python shell 
+
+1.Import default User mmodel for all users as follows:
+
+     from django.contrib.auth.models import User
+
+2.Creating user
+
+	User.create_user(username='aade',password='dx619')
+
+
+*note :-After creating user by default it has "Auth" permissions 
+
+
+3.Adding diffrent to user properties as below:
+
+	user.first_name='aade'
+	user.save()
+	user.last_name='dx'
+	user.save()
+	user.email='aade@gmail.com'
+	user.save()
+
+4.selecting perticular user:
+
+	user=User.objects.get(username='aade')
+
+
+5.Giving Diffrent permissions:
+	
+	user.is_staff=True
+	user.save()
+	user.is_superuser=True
+	user.save()
+
+6.
+
+
+
+
+
+
+
+
