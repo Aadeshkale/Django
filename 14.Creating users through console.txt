@@ -9,7 +9,7 @@ Adding users to admin site from python shell
 	User.create_user(username='aade',password='dx619')
 
 
-*note :-After creating user by default it has "Auth" permissions 
+*note :-After creating user by default it has "Auth" permissions , it create usre password in hash code 
 
 
 3.Adding diffrent to user properties as below:
@@ -33,12 +33,24 @@ Adding users to admin site from python shell
 	user.is_superuser=True
 	user.save()
 
-6.
+6.Renameing existing username
 
+	user=User.objects.get(username='aade')
+	user.username='raju'
+	user.save()
 
+7.Changeing password
 
+	user=User.objects.get(username='aade')
+	user.set_password('abcd1234')
+	user.save()
 
+8.creating user using create method
 
+	User.objects.create(username='sai',password='sai1234')
+		
+	
+* note:- it is not default method for creating user it does not create usre password in hash code 
 
 
 
