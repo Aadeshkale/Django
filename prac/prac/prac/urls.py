@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from myapp.views import index
+from myapp.views import index,details
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$',index),
+    url(r'^myapp/info/(\d+)/$',details),
 ]
