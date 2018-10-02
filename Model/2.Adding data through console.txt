@@ -1,0 +1,37 @@
+Adding data into model through condsole
+
+1.Import ur Model
+
+ 	from myapp.models import Emp
+
+2.Adding Data
+	
+	a=Emp.objects.create(name='sachin',loc='pune',sal=40000)
+
+3.Retriving All Data
+
+	res=Emp.objects.all()
+	print(res)   // returns list of objects of emp type
+
+	for i in res:
+		print(i.name,i.loc,i.sal)   // priting all data		
+
+4.Retriving perticular data 
+
+	s=Emp.objects.get(name='shraddha')
+	print(s.name)
+	print(s.loc)
+	print(s.sal)
+
+5.Modifing perticular data
+	
+	s=Emp.objects.get(name='shraddha')
+	s.sal=33000
+	s.save()                    // to make commit
+
+6.Deleting perticular data
+
+	r=Emp.objects.get(name='raju')
+	r.delete()
+
+	
