@@ -1,23 +1,12 @@
+{% load static %}
 <html>
 <head>
     <title>First Dynamic Template in Djnago</title>
-    <style>
-        body{
-           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;     
-        }
-        h1{
-            color: red;
-            text-align: center;
-            border-bottom: 2px solid green;
-        }
-        .frame{
-            float: left;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href=" {% static 'index.css' %} "> 
 </head>
 <body>
-    <h1>WElcome to Djnago Templates</h1>
-        <div>
+    <h1>Welcome to Djnago Templates</h1>
+        <div id="lang">
             <h2>List of languages:</h2>
                 <ul type="circle">
                     <li>Python</li>
