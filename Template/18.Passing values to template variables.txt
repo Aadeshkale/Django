@@ -1,0 +1,40 @@
+1.Prepare ur html template with variable
+	
+example,
+	<html>
+		<head>
+			<title>Working Fine :)</title>
+		</head>
+		<body>
+			<h1>Current date and time is:{{date1}}</h1>
+		</body>				
+	</html>
+
+2.create view in view.py
+
+example,
+	
+	from django.template.loader import get_template
+	import datetime as dt 
+	from djando.http import HttpResponse
+	from django.shortcut import render
+
+	def index(request):
+		op=dt.datetime.now()
+		t=get_template('index.html')
+		c={'date1':op}
+		res=t.render(c)
+		return HttpResponse(res)
+	
+3.maping views with url in urls.py 
+
+example,
+	
+	from django.conf.urls import url
+	from django.contrib import admin
+	from myapp.views import index
+
+	urlpatterns=[
+		path('admin/', admin.site.urls),
+		url(r'^$',index)
+	]		
