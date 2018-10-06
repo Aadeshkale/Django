@@ -20,4 +20,5 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^movies',include('movies.urls')),
+    url(r'^books',include('books.urls')),
 ]
