@@ -3,5 +3,5 @@ from books import views
 
 urlpatterns = [
     url(r'python',views.python),
-    url(r'django',views.python),
+    url(r'django',views.django),
 ]

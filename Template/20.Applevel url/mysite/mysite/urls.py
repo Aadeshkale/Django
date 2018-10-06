@@ -19,6 +19,7 @@ from django.conf.urls import include
 from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^movies',include('movies.urls')),
-    url(r'^books',include('books.urls')),
+    url(r'^movies/',include('movies.urls')),
+    url(r'^books/',include('books.urls')),
+    url(r'^institute/',include('institute.urls')),
 ]
