@@ -1,9 +1,47 @@
 <!doctype html>
 <html>
 <head>
-<title>Emp from</title>    
+<title>Emp from</title>
+<style>
+</style>
 </head>    
 <body>
-    <h1>Emp from Example</h1>
+    <h1>Emp form Example</h1>
+       <h2>Displaying hole form</h2>
+            <form>
+                {{myform}}
+            </form>
+        <h2>Accessing individual Elements of form</h2>
+            <form id>
+                    <label for="name">Enter ur name:</label> 
+                    {{myform.name}}<br>
+                    <label for="email">Enter ur Email:</label>
+                    {{myform.email}}<br>
+                    <label for="sal">Enter ur salary</label>
+                    {{myform.sal}}<br>
+                    <label for="compony">Enter ur company:</label>  
+                    {{myform.company}}<br>     
+            </form>
+        <h2>Displaying individual forms iteams using table</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td>Enter ur name:</td>
+                        <td>{{myform.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Enter ur email:</td>
+                        <td>{{myform.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Enter ur sal:</td>
+                        <td>{{myform.sal}}</td>
+                    </tr>
+                    <tr>
+                        <td>Enter ur company:</td>
+                        <td>{{myform.company}}</td>
+                    </tr>
+                </table>
+            </form>        
 </body>
 </html>
