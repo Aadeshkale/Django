@@ -1,0 +1,21 @@
+1.Create froms.py in ur app
+
+2.import forms for creation of form
+	
+	example, from django import forms
+
+3.create class for ur from
+	
+	from django import forms
+	class EmpForm(forms.Form):
+		name=CharField(max_length=20)
+		sal=IntegerField(max_value)
+		company=CharField(max_length=20)
+
+4. See the html code of form in python console
+
+	>>from empapp.forms import EmpForm
+	>>c=EmpForm()
+	>>print(c)  
+	
+	
