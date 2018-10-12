@@ -15,8 +15,9 @@
     <div class="row mt-3">
         <div class="col  ">
             <h1 class="text-info text-center">Register Here <i class="fa fa-user-circle-o" aria-hidden="true"></i></h1>
-            <form class="w-25 mx-auto border p-3 m-3 bg-light"> 
-                <div class="form-group ">
+            <form method="POST" class="w-25 mx-auto border p-3 m-3 bg-light"> 
+                {% csrf_token %}
+                <div class="form-group">
                   {{myform.name}}  
                 </div>
                 <div class="form-group">
