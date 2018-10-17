@@ -19,19 +19,33 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="card w-50 mx-auto mt-4">
+                <div class="card w-75 mx-auto mt-4">
                     <div class="card-header">
-                        <h2 class="text-success">Pelease select ur option</h2>
+                        <h2 class="text-success">All Product Details </h2>
                     </div>
                     <div class="card-body">
-                         <form method="POST">
-                             {% csrf_token %}
-                            <div class="form-group">
-                                    {{myform}} 
-                                    <input type="submit" class="btn btn-outline-deep-purple" >
-                                    <input type="reset" class="btn btn-outline-deep-orange float-right" >
-                            </div>
-                         </form>
+                        <table class="table table-info table-bordered table-striped text-center ">
+                            <thead>
+                                <tr>
+                                    <th>Product Id</th>
+                                    <th>Product Name</th>
+                                    <th>Product Cost</th>
+                                    <th>Product Quantity</th>
+                                    <th>Product Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in data %}
+                                   <tr>
+                                       <td>{{row.productId}}</td>
+                                       <td>{{row.productName}}</td>
+                                       <td>{{row.productCost}}</td>
+                                       <td>{{row.productQuantity}}</td>
+                                       <td>{{row.productDescription}}</td>
+                                   </tr> 
+                                {% endfor %}                                    
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
