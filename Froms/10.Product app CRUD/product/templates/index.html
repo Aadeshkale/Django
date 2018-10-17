@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">   
+</head>
+<body>
+<header>
+        <h1 class="text-center text-danger p-4 bg-light">Product App <i class="fa fa-server"></i></h1>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card w-50 mx-auto mt-4">
+                    <div class="card-header">
+                        <h2 class="text-success">Pelease select ur option</h2>
+                    </div>
+                    <div class="card-body">
+                         <div class="list-group">
+                             <a href="insert/" class="list-group-item list-group-item-action list-group-item-primary">Insert Ur Product</a>
+                             <a href="display/" class="list-group-item list-group-item-action list-group-item-primary">Display All Product</a>
+                             <a href="update/" class="list-group-item list-group-item-action list-group-item-primary">Update Ur Product</a>
+                             <a href="delete/" class="list-group-item list-group-item-action list-group-item-primary">Update Ur Product</a>
+                         </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="text-center text-danger p-4 bg-light mt-4 ">
+        <h1 >ProductApp All rights reserved 2k18</h1>
+        <h2 >Made by Aadesh</h2>
+</footer>
+
+
+
+
+
+<script src="{% static 'js/jquery-3.2.1.min.js '%}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script src="{% static 'js/fontawesome-all.js' %}"></script>
+</body>
+</html>
