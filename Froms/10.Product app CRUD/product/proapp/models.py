@@ -6,7 +6,6 @@ class Product(models.Model):
     productCost=models.IntegerField()
     productQuantity=models.IntegerField()
     productDescription=models.CharField(max_length=50,blank=True)
-
     obj=models.Manager()
     class Meta:
         db_table='product'

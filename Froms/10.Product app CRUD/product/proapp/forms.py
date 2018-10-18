@@ -5,33 +5,41 @@ class ProductForm(forms.ModelForm):
         model=Product
         fields='__all__'
 
-        productId=forms.IntegerField(
+    productId=forms.IntegerField(
             widget=forms.TextInput(attrs={
                 'class':'form-control',
                 "placeholder":"Enter Product Id",
             })
-        )
-        productName=forms.CharField(
+    )
+    productName=forms.CharField(
             widget=forms.TextInput(attrs={
                 'class':'form-control',
                 "placeholder":"Enter Product Name",
             })
         )
-        productCost=forms.IntegerField(
+    productCost=forms.IntegerField(
             widget=forms.NumberInput(attrs={
                 'class':'form-control',
                 'placeholder':'Enter Product Cost',
             })
         )
-        productQuantity=forms.IntegerField(
+    productQuantity=forms.IntegerField(
             widget=forms.NumberInput(attrs={
                 'class':'form-control',
                 'placeholder':'Enter Product Quantity',
             })
         )
-        productDescription=forms.CharField(
+    productDescription=forms.CharField(
             widget=forms.TextInput(attrs={
                 'class':'form-control',
                 'placeholder':'Enter Product Description',
             })
         )
+      
+class DeleteForm(forms.Form):
+    productId=forms.IntegerField(
+        widget=forms.NumberInput(attrs={
+            'class':'form-control',
+            'placeholder':'Enter productId to delete',
+        })
+    )      
