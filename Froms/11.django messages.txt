@@ -23,4 +23,6 @@ displaying messages to user in django templates
 
 4.redirecting to same page
 
-	return HttpResponseRedirect(request.path_info)  
+	return HttpResponseRedirect(request.path_info)
+
+5.working fine  
