@@ -28,6 +28,12 @@ Adding data into model through condsole
 	s=Emp.objects.get(name='shraddha')
 	s.sal=33000
 	s.save()                    // to make commit
+	
+	OR
+
+	s=Emp.objets.filter(name='shraddha')
+	s.update(sal=3000)	
+
 
 6.Deleting perticular data
 
