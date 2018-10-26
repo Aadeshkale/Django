@@ -1,0 +1,47 @@
+1.Creating Cookies
+	response.set_cookie('name','value')
+	
+	example,
+		
+		def create(request):
+			response=render(request,'demo.html')
+			response.set_cookie('color','red')
+			return response	
+
+2.Accessing Cookies
+	request.COOKIES.get('name')
+
+	example,
+
+	  def check(request):
+		if request.COOKIES.get('color'):
+			return HttpResponse('Cookie is alerdy exists')
+		else:
+			return HttpResponse('Cookie NOT exists')
+
+3.Deleting Cookies:
+	response.delete_cookie('name')
+
+	example,
+
+	def delete(request):
+	  if request.COOKIES.get('color'):
+		msg="Cookie deleted sucessfully "
+		response=render(request,'demo.html',{'msg': msg})
+		return response
+
+4.visit count example
+
+def visit(request):
+	if request.COOKIES.get(color''):
+		cnt=int(request.COOKIES.get(color''))
+		cnt=cnt+1
+		msg="Your visits {}".format(cnt)
+		response=render(request,'demo.html',{'msg': msg})
+		response.set_cookie('visit',str(cnt))
+		return response	
+	else:
+		msg="This is your first time visit"
+		response=render(request,'demo.html',{'msg': msg})
+		response.set_cookie('visit','1')
+		return response	
