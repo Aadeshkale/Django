@@ -10,7 +10,7 @@ class EmpFrom(forms.Form):
     )
     email=forms.EmailField(max_length=20,
     label="Enter Employee Email:",
-    widget=forms.TextInput(
+    widget=forms.EmailInput(
         attrs={
             'class':'form-control',
         }
@@ -18,7 +18,7 @@ class EmpFrom(forms.Form):
     )
     salary=forms.IntegerField(
     label="Enter Employee Email:",
-    widget=forms.TextInput(
+    widget=forms.NumberInput(
         attrs={
             'class':'form-control',
         }

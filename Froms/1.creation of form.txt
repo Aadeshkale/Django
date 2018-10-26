@@ -2,7 +2,7 @@
 
 2.import forms for creation of form
 	
-	example, from django import forms
+	from django import forms
 
 3.create class for ur from
 	
