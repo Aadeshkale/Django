@@ -26,4 +26,4 @@ APP_DIRS:
 
 if it is true it is indicate that DjangoTemplate will execute all templtates of all installed apps
 
-if it is falseit is indicate that DjangoTemplate will execute only perticular templtates of user ceated apps  	 
+if it is false it is indicate that DjangoTemplate will execute only perticular templtates of user ceated apps  	
