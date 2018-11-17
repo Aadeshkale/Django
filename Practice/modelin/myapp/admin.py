@@ -4,3 +4,4 @@ from myapp.models import *
 
 admin.site.register(Student)
 admin.site.register(Coustmer)
+admin.site.register(Employee)

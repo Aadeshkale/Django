@@ -1,16 +1,22 @@
 from django.db import models
 
-class Common(models.Model):
-    name=models.CharField(max_length=20)
-    age=models.IntegerField()
-    def __str__(self):
-        return self.name
-    class Meta:
-        abstract=True
+# class Student(models.Model):
+#     name=models.CharField(max_length=20)
 
-class Student(Common,models.Model):
-    subject=models.CharField(max_length=20)
+# class Coustmer(Student):
+#     payment=models.IntegerField()
 
-class Coustmer(Common,models.Model):
-     payment=models.IntegerField()
+# class Employee(Coustmer):
+#     address=models.CharField(max_length=20)
 
+class Coustmer(models.Model):
+    cname=models.CharField(max_length=20)
+    csals=models.IntegerField()
+
+class Employee(Coustmer):                                    # inherits properties from Coustmer class
+    ename=models.CharField(max_length=20)                    # cname,csals   
+    esal=models.IntegerField()
+
+class Student(Employee):                                      # inherits propertis from Coustmer , Employee                   
+    sname=models.CharField(max_length=20)                    # cname,csals ,ename,esal   
+    sfee=models.IntegerField()
