@@ -50,7 +50,7 @@ Adding users to admin site from python shell
 	User.objects.create(username='sai',password='sai1234')
 		
 	
-* note:- it is not default method for creating user it does not create usre password in hash code 
+* note:- it is not default method for creating user it does not create usre password in hash code you have to set manually password for user in hash code 
 
 
 
