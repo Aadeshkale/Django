@@ -2,11 +2,11 @@ from django.contrib import admin
 from myapp.models import *
 # Register your models here.
 
-class  AdminBook(admin.ModelAdmin):
-    list_display=['id','name','year','price']
+class  AdminStudent(admin.ModelAdmin):
+    list_display=['id','name','age']
 
-class AdminAuthor(admin.ModelAdmin):
-    list_display=['book_id','name']
+class AdminSubject(admin.ModelAdmin):
+    list_display=['name']
 
-admin.site.register(Book,AdminBook)
-admin.site.register(Author,AdminAuthor)
+admin.site.register(Student,AdminStudent)
+admin.site.register(Subject,AdminSubject)
