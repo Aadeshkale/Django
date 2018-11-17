@@ -52,3 +52,15 @@ class Depart(models.Model):
     def __str__(self):
       return self.dname
 
+5.PROTECT
+
+In this rule if we delete parent record then it will protect parent record haveing child record
+
+example,
+
+class Depart(models.Model):
+    ed=models.OneToOneField(Emp,on_delete=models.PROTECT,null=True)
+    dname=models.CharField(max_length=10)
+    def __str__(self):
+      return self.dname
+
