@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calc App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #main-div{
+            width: 400px;
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <h2>Substraction:</h2>
+        <form action="../subop" method="GET">
+            <table>
+                <tr>
+                    <td>No1:</td>
+                    <td>
+                        <input type="number" name="no1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>No2:</td>
+                    <td>
+                        <input type="number" name="no2">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
