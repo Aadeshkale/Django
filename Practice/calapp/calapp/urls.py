@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^$',include('home.urls')),
     url(r'^add',include('add.urls')),
     url(r'^sub',include('sub.urls')),
+    url(r'^mul',include('mul.urls')),
+    url(r'^div',include('div.urls')),
 ]

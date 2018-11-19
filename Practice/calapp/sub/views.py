@@ -7,6 +7,6 @@ def sub(request):
 def op(request):
     num1=int(request.GET['no1'])
     num2=int(request.GET['no2'])
-    res=num1-num2
+    res=num1-   num2
     s="<h1> Substarction is:"+ str(res) +"</h1>"
     return HttpResponse(s)
