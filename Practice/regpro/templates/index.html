@@ -17,6 +17,16 @@
             <form  method="POST" class="w-25 mx-auto p-3 border border-dark">
                 {% csrf_token %}
                 <h1>Fill the form</h1>
+                
+                {% if messages %}
+                    {% for msg in messages %}
+                        <div class="alert alert-{{msg.tags}} alert-dismissible">
+                        <a href="" class="close" data-dissmiss="alert">&times;</a>
+                            {{msg}}
+                        </div>
+                    {% endfor %}                                
+                {% endif %}
+                    
                 <div class="form-group">
                     {{myform.name}}
                 </div>

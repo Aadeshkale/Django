@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from myapp.forms import RegForm
 from myapp.models import Reg
+from django.contrib import messages
 def index(request):
    if request.method=='POST':
        myform=RegForm(request.POST)
@@ -11,7 +12,8 @@ def index(request):
             rgender=request.POST.get('gender')
             rcountry=request.POST.get('country')
             if Reg.objects.filter(email=remail):
-                return HttpResponse('<h1>Email is already register</h1>')
+                m=messages.warning(request,'Email is already register')
+                return render(request,'index.html',{'msg':m,'myform':myform})
             else:
                 Reg.objects.create(
                     name=rname,
@@ -19,7 +21,9 @@ def index(request):
                     gender=rgender,
                     country=rcountry,
                 )     
-                return HttpResponse('<h1>Data added successfully :) </h1>')
+                m=messages.success(request,'data added successfully')
+                return render(request,'index.html',{'msg':m,'myform':myform})
+                
        else:
            return HttpResponse('<h1>data is not valid</h1>')     
    else:
