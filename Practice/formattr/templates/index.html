@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form fields with diff attrs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    {{myform.name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{myform.email}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{myform.uid}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{myform.gender}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{myform.country}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
