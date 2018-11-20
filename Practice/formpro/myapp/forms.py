@@ -6,6 +6,7 @@ class Employee(forms.Form):
         ('Male',"Male"),
         ('Female',"Female"),
     ]
-    gender=forms.ChoiceField(choices=gen)
+    gender=forms.ChoiceField(choices=gen,
+    widget=forms.RadioSelect(),
+    )
     uid=forms.IntegerField()
-    
