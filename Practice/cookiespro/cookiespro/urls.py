@@ -19,4 +19,5 @@ from django.conf.urls import url,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$',include("cookiesapp.urls")),
+    url(r'^cookie',include("cookiesapp.urls")),
 ]
