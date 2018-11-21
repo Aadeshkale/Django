@@ -11,7 +11,29 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Working fine</h1>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="w-25 mx-auto p-3 border border-dark m-2">
+                <form method="POST">
+                    {% csrf_token %}
+                    {% if messages %}
+                        {% for msg in messages %}
+                            <div class="alert alert-{{ msg.tags }} alert-dismissible">
+                                <a href="" class="close" data-dissmiss="alert">&times;</a>    
+                                {{msg}}    
+                            </div>
+                        {% endfor %}    
+                    {% endif %}
+                    <div class="form-group">
+                        {{myform}}
+                       <div>
+                            <input type="submit" class="form-control btn btn-primary">
+                       </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
