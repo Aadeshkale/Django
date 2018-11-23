@@ -1,5 +1,5 @@
 """
-WSGI config for calcpro project.
+WSGI config for Crud project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'calcpro.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Crud.settings')
 
 application = get_wsgi_application()
