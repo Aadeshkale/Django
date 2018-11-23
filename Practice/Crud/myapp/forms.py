@@ -10,7 +10,7 @@ class InsertForm(forms.ModelForm):
         'class':'form-control',
     })
     )    
-    email=forms.EmailField(max_length=20,
+    email=forms.EmailField(max_length=50,
     widget=forms.EmailInput(attrs={
         'placeholder':'Enter Emp email',
         'class':'form-control',

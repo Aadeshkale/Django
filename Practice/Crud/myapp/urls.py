@@ -3,4 +3,5 @@ from myapp.views import *
 urlpatterns = [
     url(r'^$',index),
     url(r'^insert',insert),
+    url(r'^display',display),
 ]

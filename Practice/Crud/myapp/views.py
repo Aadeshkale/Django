@@ -23,3 +23,7 @@ def insert(request):
     else:
         myform=InsertForm()
         return render(request,'insert.html',{'myform':myform})      
+
+def display(request):
+    data=Emp.objects.all()
+    return render(request,'display.html',{'data':data})
