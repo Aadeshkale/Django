@@ -48,3 +48,20 @@ def update(request):
     else:
         myform=UpdateForm()
         return render(request,'update.html',{'myform':myform})          
+
+def delete(request):
+   if request.method=="POST":
+       myform=DeleteForm(request.POST)
+       if myform.is_valid():
+           rmail=request.POST.get('email')
+           if Emp.objects.filter(email=rmail):
+               ob=Emp.objects.get(email=rmail)
+               ob.delete()
+               messages.success(request,'Data deleted successfully')
+               return redirect(delete)
+           else:
+               messages.success(request,'Email is not registered')
+               return redirect(delete)    
+   else:
+        myform=DeleteForm()
+        return render(request,'delete.html',{'myform':myform}) 

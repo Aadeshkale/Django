@@ -53,3 +53,11 @@ class UpdateForm(forms.Form):
     country=forms.ChoiceField(choices=cou,
         widget=forms.RadioSelect(),
     )
+
+class DeleteForm(forms.Form):
+    email=forms.EmailField(
+        widget=forms.EmailInput(attrs={
+            'placeholder':'Enter ur email to delete record',
+            'class':'form-control',
+        })
+    )
