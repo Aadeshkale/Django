@@ -38,3 +38,18 @@ class InsertForm(forms.ModelForm):
     country=forms.ChoiceField(
     choices=cou,
     )
+
+class UpdateForm(forms.Form):
+    email=forms.EmailField(max_length=20,
+    widget=forms.EmailInput(attrs={
+        'placeholder':'Enter ur email',
+        'class':'form-control',
+    })
+    )
+    cou=[
+        ('India','India'),
+        ('Other','Other'),
+    ]
+    country=forms.ChoiceField(choices=cou,
+        widget=forms.RadioSelect(),
+    )

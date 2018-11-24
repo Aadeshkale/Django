@@ -27,3 +27,24 @@ def insert(request):
 def display(request):
     data=Emp.objects.all()
     return render(request,'display.html',{'data':data})
+
+def update(request):
+    if request.method=="POST":
+        myform=UpdateForm(request.POST)
+        if myform.is_valid():
+            rmail=request.POST.get('email')
+            rcou=request.POST.get('country')
+            if Emp.objects.filter(email=rmail):
+                ob=Emp.objects.filter(email=rmail)
+                ob.update(country=rcou)
+                messages.success(request,'Data updated sucessfully')
+                return redirect(update)
+            else:
+                messages.success(request,'Email is not registered')
+                return redirect(update)
+        else:
+              messages.success(request,'Data is invalid')
+              return redirect(update)       
+    else:
+        myform=UpdateForm()
+        return render(request,'update.html',{'myform':myform})          

@@ -4,4 +4,5 @@ urlpatterns = [
     url(r'^$',index),
     url(r'^insert',insert),
     url(r'^display',display),
+    url(r'^update',update),
 ]
