@@ -1,0 +1,43 @@
+1.Create media url in settings.py 
+	
+	MEDIA_URL = '/media/'
+	MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+2.Writing Model for storing refrence data for files in models.py
+	
+	class File(models.Model):
+		name=forms.CharField(max_length=255)
+		doc=forms.FieldField(uploaded_to='media')
+		date=forms.DateAndTimeField(auto_add_now=True)
+
+3.Writing form for files in forms.py	 
+	
+	from django import forms
+	from myapp.model import File
+	class FileForm(forms.ModelForm):
+		class Meta():
+			model=File
+			fields=['name','doc']
+
+4.writing view to handle business logic in views.py
+
+	from django.http import HttpResponse
+	from myapp.form import FileForm
+	from myapp.model import File
+	
+	def ups(request):
+		if request.method=='POST':
+			myform=File(request.POST,request.FILES)
+			if myform.is_valid():
+				myform.save()
+				return HttpResponse('File uploaded')
+			else:
+				return HttpResponse('invalid data')
+		else:
+			myform=File()
+			return 			render(request,'file.html',{'myfile':myform})
+
+**note ur html form should contain method='POST' attribute
+for handleing form data and enctype='multiport/form-data' for handling form with files data
+
+	request.FILES['doc']==> this method is used to access file
