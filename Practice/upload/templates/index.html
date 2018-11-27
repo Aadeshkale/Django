@@ -12,6 +12,16 @@
 </head>
 <body>
     <h1 class="text-danger text-center m-2">Uplading Files Example :)</h1>
+    <div class="mx-auto text-center w-25 p-3">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {{myform.name}}
+                {{myform.document}}
+            </div>
+            <input type="submit" class="btn btn-success">
+        </form>
+    </div>
 <script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
 <script src="{% static 'js/popper.min.js'%}"></script>
 <script src="{% static 'js/bootstrap.js'%}"></script>
