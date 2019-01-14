@@ -33,7 +33,7 @@
 4.visit count example
 
 def visit(request):
-	if request.COOKIES.get(color''):
+	if request.COOKIES.get('color'):
 		cnt=int(request.COOKIES.get(color''))
 		cnt=cnt+1
 		msg="Your visits {}".format(cnt)

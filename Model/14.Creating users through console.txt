@@ -6,7 +6,7 @@ Adding users to admin site from python shell
 
 2.Creating user
 
-	User.create_user(username='aade',password='dx619')
+	User.objects.create_user(username='aade',password='dx619')
 
 
 *note :-After creating user by default it has "Auth" permissions , it create usre password in hash code 

@@ -4,45 +4,54 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Form Validation Using regex</title>
+    <title>From Validation in Django</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'  %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css'  %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css'  %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1 class="text-center text-primary">Form validation using django.core regexvalidator</h1>
-    <div class="container">
+    <header class="text-center text-success m-3 ">
+            <h1>Form validation example</h1>
+    </header>
+    <section>
         <div class="row">
-            <div class="col">
-                <form method="POST" class="w-50 mx-auto mt-2 border border-dark p-3">
+            <div class="mx-auto w-25 border border-dark p-3">
+                <form method="POST">
                     {% csrf_token %}
-                    <div class="form-group text-center">
-                        {% if messages %}
-                            {% for msg in messages %}
-                                <div class="alert alert-{{msg.tags}} alert-dismissible">
-                                   <a href="" class="close" data-dissmiss="alert">&times;</a>
-                                    {{msg}}     
-                                </div>
-                            {% endfor %}
-                        {% endif %}
-
-                        {{valform.name}}
-                        {{valform.email}}
-                        {{valform.number}}
+                    <div class="form-group">
+                            <!-- {{myform.name}}
+                            <label for="id_email"></label>
+                            {{myform.email}}
+                            {{myform.phone}}
+                            <p>Please Select your gender:
+                                {{myform.gender}}
+                            </p>
+                            <p>Please Select your contry:
+                                    {{myform.country}}
+                            </p>         -->
+                            <!-- {{myform.as_table}} -->
+                            {{myform}}
                     </div>
-                    <input type="submit" class="btn btn-primary">
-                    <input type="reset" class="btn btn-black">
+                    <div>
+                        <input type="submit" class="btn btn-outline-purple">
+                        <a href="./">
+                            <input type="button" value="reset"  class="btn btn-outline-danger">
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
-<script src="{%  static 'js/jquery-3.2.1.min.js' %}"></script>
-<script src="{%  static 'js/popper.min.js' %}"></script>
-<script src="{%  static 'js/bootstrap.js' %}"></script>
-<script src="{%  static 'js/mdb.js' %}"></script>
-<script src="{%  static 'js/fontawesome-all.js' %}"></script>
+
+
+    
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script src="{% static 'js/fontawesome-all.js' %}"></script>
 </body>
 </html>

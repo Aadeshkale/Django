@@ -9,7 +9,7 @@ class Student(models.Model):
          return self.name 
 
 class Course(models.Model):
-    student=models.ForeignKey(Student)               # many to one reletionship i.e ForeignKey
+    student=models.ForeignKey(Student,on_delete=models.CASCADE)               # many to one reletionship i.e ForeignKey
     cname=models.CharField(max_length=20)
     def __str__(self):
         return self.cname

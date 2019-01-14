@@ -9,7 +9,7 @@ class Student(models.Model):
         return self.name+"->"+str(self.age)+"->"+self.address
 
 class Course(models.Model):
-    student=models.OneToOneField(Student)
+    student=models.OneToOneField(Student,on_delete=models.DO_NOTHING)
     cname=models.CharField(max_length=20)
     fname=models.CharField(max_length=10)
     def __str__(self):
