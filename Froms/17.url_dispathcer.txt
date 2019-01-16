@@ -1,0 +1,19 @@
+1. using path method
+
+path('/<srt:name>/<int:id>',display)
+
+	here we pass a string and number to create url example
+	
+	eg.raju/1
+	eg.ganu/2
+	eg.kunnu/3
+
+2.here display method accepts two parameters i.e name and id
+
+	def display(name,id):
+		data=Info.objects.get(id=id)
+		return render (request,'dis.html',{'data':data})
+		
+
+	
+	 
