@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+    <div  class="container">
+        <div class="row">
+            
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="alert alert-{{msg.tags}} alert-dismissible">
+                           <a href="" class="close" data-dissmiss="alert">&times;</a>
+                           {{msg}} 
+                    </div>
+                {% endfor %}
+            {% endif %}
+                
+            <div class="mx-auto mt-3">
+                <a class="btn btn-outline-dark-green" href="myapp/login">login</a>
+                <a class="btn btn-outline-purple" href="myapp/register">register</a>
+            </div>
+        </div>
+    </div>
+{% endblock maincontent %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+    <div class="mx-auto border border-dark p-2 w-50 mt-4">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{myform.name}}
+                {{myform.email}}
+                {{myform.number}}
+                {{myform.address}}
+                {{myform.password}}
+            </div>
+            <input class="btn btn-outline-dark-green" type="submit" value="register">
+            <input class="btn btn-outline-black" type="reset">
+        </form>
+    </div>
+{% endblock maincontent%}
