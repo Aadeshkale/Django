@@ -1,0 +1,55 @@
+1. using path method
+
+path('/<srt:name>/<int:id>',display)
+
+	here we pass a string and number to create url example
+	
+	eg.raju/1
+	eg.ganu/2
+	eg.kunnu/3
+
+here display method accepts two parameters i.e name and id
+
+	def display(name,id):
+		data=Info.objects.get(id=id)
+		return render (request,'dis.html',{'data':data})
+		
+
+2.using url() methdod (https://www.webforefront.com/django/regexpdjangourls.html)
+
+url(r'^$',..)	
+Empty string (Home page)
+Matches:
+http://127.0.0.1/	
+	 	
+
+url(r'^stores/',.....)
+Any trailing characters
+Matches:
+http://127.0.0.1/stores/
+http://127.0.0.1/stores/long+string+with+12345
+
+
+url(r'^about/contact/$',.....)
+Exact, no trailing characters
+Matches:
+http://127.0.0.1/about/contact/
+Doesn't match:
+http://127.0.0.1/about/
+
+
+url(r'^stores/\d+/',....)
+Number
+Matches:
+http://127.0.0.1/stores/2/
+http://127.0.0.1/stores/34/
+Doesn't match:
+http://127.0.0.1/stores/downtown/
+
+
+url(r'^drinks/\D+/',.....)
+Non-digits
+Matches:
+http://127.0.0.1/drinks/mocha/
+Doesn't match:
+http://127.0.0.1/drinks/324/

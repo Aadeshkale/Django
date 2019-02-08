@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+    <form method="POST">
+        {% csrf_token %}
+            <div class="form-group border border-dark p-2 mt-3 w-25 mx-auto">
+                    {{form.as_table}}
+                    <input type="submit" class="btn btn-outline-dark-green" value="login">
+            </div>  
+        
+    </form>
+{% endblock maincontent %}
+    

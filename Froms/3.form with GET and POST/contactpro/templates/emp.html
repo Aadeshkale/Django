@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>Emp from</title>
+<style>
+    #rest{
+        float:right;
+    }
+    form table tr td{
+        padding: 3px;
+    }
+</style>
+</head>    
+<body>
+    <h1>Emp form Example</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Enter ur name:</td>
+                    <td>{{myform.name}}</td>
+                </tr>
+                <tr>
+                    <td>Enter ur email:</td>
+                    <td>{{myform.email}}</td>
+                </tr>
+                <tr>
+                    <td>Enter ur salary:</td>
+                    <td>{{myform.sal}}</td>
+                </tr>
+                <tr>
+                    <td>Enter ur company:</td>
+                    <td>{{myform.company}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="submit">
+                        <input type="reset" id="rest" value="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    
+
+
+
+</body>
+</html>

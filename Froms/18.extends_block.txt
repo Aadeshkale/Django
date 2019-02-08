@@ -1,0 +1,28 @@
+1.Create your own base file for your template
+
+	base.html
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+</head>
+<body>
+   {% block content %}
+	// this conent the code which going to overide in another 	// html file 
+   {% endblock content%}     
+</body>
+</html>
+
+
+2.Access the base.html file content using "extends" keyword 
+
+	index.html
+
+{% extends 'base.html' %}
+
+{% block content %} 
+	// this contains the block which going to place inside the 
+	// content block in base.html file
+
+{% endblock content %}

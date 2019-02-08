@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <title>home page</title>
+<style>
+    body{
+        margin: 0;
+        overflow:hidden;
+    }
+    .head{
+        text-align: center;
+        color: white;
+        background-color:black;
+        padding:10px;
+        font-size: 18px;
+    }
+    .foot{
+        position:absolute;
+        bottom: 0px;
+        width: 100%;
+        
+    }
+    #mainsection{
+        margin: 50px;
+       
+    }
+    .info{
+        text-align: center;
+        width: 350px;
+        border: 2px solid green;
+        float: left;
+        margin: 30px;
+        background-color: darkgray;
+    }
+    .info:hover{
+        text-align: center;
+        width: 350px;
+        border: 2px solid green;
+        float: left;
+        margin: 30px;
+        background-color: lightblue;
+    }
+    .info p{
+        text-align: left;
+        padding: 5px;
+    }
+    .info a{
+        padding: 5px;
+        float: right;
+        font-size: 18px;
+        text-decoration: none;
+    }
+</style>    
+</head>
+<body>
+    <header class="head">
+        <h1>Welcome to Django site :)</h1>
+    </header>
+    <section>
+            <div id="mainsection">
+                <div class="info">
+                    <h1>Python</h1>
+                    <p>1) Easy to Learn<br>
+                       2) Expressive Language<br>
+                       3) Interpreted Language
+                    </p>
+                    <a href="home/python/">read more</a>
+                </div>
+                <div class="info">
+                    <h1>Django</h1>
+                    <p>
+                           1) Rapid Development.<br>
+                           2) Secure.<br>
+                           3) Scalable.
+                    </p>
+                    <a href="home/django/">read more</a>
+                </div>
+                <div class="info">
+                    <h1>Rest Api</h1>
+                    <p>
+                            1) Browseable HTML API.<br>
+                            2) Development team / full-time support.<br>
+                            3) ORM and NON-ORM Data Serialization.
+                    </p>
+                    <a href="home/restapi/">read more</a>
+                </div>
+            </div>
+    </section>
+    <footer class="head foot"> 
+            <h1>All Right Reserved 2K18 </h1>
+            <p>Made by Aadesh</p>
+    </footer>
+
+</body>
+</html>
