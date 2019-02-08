@@ -9,8 +9,8 @@ def op(request):
     x=int(request.GET['val1'])
     y=int(request.GET['val2'])
     z=x+y
-    t=get_template('add/add.html')
-    c={'result':z}
-    page=t.render(c)
-    return HttpResponse(page)
-
+   #  t=get_template('add/add.html')
+   #  c={'result':z}
+   #  page=t.render(c)
+   #  return HttpResponse(page)
+    return render(request,'add/add.html',{'result':z})

@@ -1,0 +1,37 @@
+1.Creating user 
+from django.contrib.auth.models import User
+User.objects.create_user(username='raju',password='raju4440',
+					is_staff=True)
+
+2.Creathing group
+
+from django.contrib.auth.models import Group
+Group.objects.create(name='techers')
+
+3.Adding user to group
+
+from django.contrib.auth.models import User,Group
+grp=Group.objects.get(name='teachers')
+users=User.objects.exclude(is_superuser=True)
+for i in users:
+	i.groups.add(grp)
+
+4.Selecting permissions 
+per=Permissions.objects.filter(contentType_id=7)
+
+5.adding permissions to group
+for i in per:
+	grp.permissions.add(i)
+					
+
+full example,
+
+content_type = ContentType.objects.get(app_label='', model='')
+#get all permssions for this model
+perms = Permission.objects.filter(content_type=content_type)
+
+group = Group.objects.get(name='')
+
+for p in perms:
+    group.permissions.add(perms)
+						

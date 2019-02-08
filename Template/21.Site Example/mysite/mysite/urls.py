@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf.urls import url,include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^home',include('home.urls')),
     url(r'^$',include('home.urls')),
+    url(r'^home',include('home.urls')),
+    
 ]

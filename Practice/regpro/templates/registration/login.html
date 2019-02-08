@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block myblock %}
+    <div class="">
+        <form method="POST" class="w-25 mx-auto text-center">
+            {% csrf_token %}
+            <h2>Login Here :)</h2>
+            <div class="form-group p-2 border border-dark">
+                {{form.as_table}}
+                <div class="mt-2">
+                    <input class="btn btn-info" type="submit" value="Login">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock myblock %}
+    

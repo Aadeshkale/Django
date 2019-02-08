@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from myapp.forms import Reg
 from django.contrib.auth.models import User
 from django.contrib import messages
+
+
 def index(request):
     return render(request,'index.html')
 

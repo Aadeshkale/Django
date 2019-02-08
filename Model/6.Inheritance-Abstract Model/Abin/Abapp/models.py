@@ -7,7 +7,7 @@ from django.db import models
 class Common(models.Model):
     name=models.CharField(max_length=20)
     loc=models.CharField(max_length=20)
-    class Meta:                              # creating class abstract by using meta information                                   
+    class Meta():                              # creating class abstract by using meta information                                   
         abstract = True        
 
 class Student(Common):                       # inheriting name , loc from common abs class                          
